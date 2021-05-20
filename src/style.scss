@@ -1,31 +1,3 @@
-<template>
-<div>
-  <p>{{chosenName}}</p>
-  <button @click="picker">Choose!</button>
-</div>
-
-
-</template>
-
-<script>
-export default{
-  data() {
-    return{
-    list: ['Ashley','Andy','Andrew','Chad','Hiep','Sarah','Dave'],
-    chosenName: 'Game Pass or Fail!'
-  }
-  },
-  methods: {
-    picker(){
-      var chosenNumber = Math.floor(Math.random() * this.list.length);
-      this.chosenName = this.list[chosenNumber];
-    }
-}
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
 $gray: #CFD8DC;
 $blue: #42A5F5;
 $purple: #8E24AA;
@@ -77,13 +49,12 @@ body{
 p{
   font-size: 2em;
   text-align: center;
-  color: #42A5F5;
-  text-transform: uppercase;
+  color: #EF5350;
 }
 
 button{
   border: none;
-  background: #42A5F5;
+  background: #EF5350;
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -92,4 +63,4 @@ button{
   cursor: pointer;
   box-shadow: 0 1px 5px rgba(#444,0.5);
   outline:none;
-}</style>
+}
