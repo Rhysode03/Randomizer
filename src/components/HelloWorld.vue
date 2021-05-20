@@ -15,7 +15,9 @@
 export default{
   data() {
     return{
-    list: ['Ashley','Andy','Andrew','Chad','Hiep','Sarah','Dave'],
+    list: ['Dragon Quest Builders 2', 'FIFA 21', 'Outlast 2', 'Final Fantasy X/X-2', 'Just Cause 4', 'Psychonauts', 
+    'Remnant: From the Ashes', 'Snowrunner', 'Secret Neighbor', 'The Wild at Heart', 
+    'The Catch: Carp & Coarse Fishing', 'Knockout City', 'Maneater', 'Slime Rancher', 'Solasta: Crown of the Magister', 'Spellforce 3: Soul Harvest'],
     chosenName: 'Randomizer'
   }
   },
