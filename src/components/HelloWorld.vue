@@ -1,7 +1,11 @@
 <template>
-<div>
+<div class="container mt-4 mx-auto">
+<div class="row d-flex justify-content-center">
   <p>{{chosenName}}</p>
-  <button @click="picker">Choose!</button>
+  </div>
+  <div class="row d-flex justify-content-center">
+  <button class="btn-lg btn-primary" @click="picker">Choose!</button>
+  </div>
 </div>
 
 
@@ -12,7 +16,7 @@ export default{
   data() {
     return{
     list: ['Ashley','Andy','Andrew','Chad','Hiep','Sarah','Dave'],
-    chosenName: 'Game Pass or Fail!'
+    chosenName: 'Randomizer'
   }
   },
   methods: {
@@ -26,56 +30,8 @@ export default{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-$gray: #CFD8DC;
-$blue: #42A5F5;
-$purple: #8E24AA;
-$pink: #F06292;
-$aqua: #64FFDA;
-$orange: #FF6D00;
-$green: #00C853;
-$red: #EF5350;
-$dark: #444;
-$white: #fff;
-$black: #000;
-
-$p_purple: #CE93D8;
-$p_blue: #81D4FA;
-$p_yellow: #FFF59D;
-$p_bluegreen: #80CBC4;
-$p_green: #A5D6A7;
-$p_pink: #F48FB1;
-$p_orange: #FFCC80;
-$p_darkorange: #FFAB91;
-$p_red: #E57373;
-
-body{
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: darken(#fff,3%);
-  font-family: 'Montserrat',sans-serif;
-  font-weight: 500;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-#app{
-  min-width: 400px;
-  height: 400px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #fff;
-  box-shadow: 0 1px 5px rgba(#444,0.5)
-}
-
 p{
-  font-size: 2em;
+  font-size: 5rem;
   text-align: center;
   color: #42A5F5;
   text-transform: uppercase;
