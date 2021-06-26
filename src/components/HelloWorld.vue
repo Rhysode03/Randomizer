@@ -15,9 +15,8 @@
 export default{
   data() {
     return{
-    list: ['Dragon Quest Builders 2', 'FIFA 21', 'Outlast 2', 'Final Fantasy X/X-2', 'Just Cause 4', 'Psychonauts', 
-    'Remnant: From the Ashes', 'Snowrunner', 'Secret Neighbor', 'The Wild at Heart', 
-    'The Catch: Carp & Coarse Fishing', 'Knockout City', 'Maneater', 'Slime Rancher', 'Solasta: Crown of the Magister', 'Spellforce 3: Soul Harvest'],
+    list: ['Backbone', 'Darkest Dougeon', 'Yakuza: Like a Dragon', 'Arx Fatalis', 'Dishonored: Death of the Outsider', 'Doom', 'The Evil Within 2', 'Rage',
+    'Wolfenstein II: The New Colossus', 'Fallout', 'Fallout 2', 'Fallout 3', 'Fallout Tactics', 'Worms Rumble', 'Iron Harvest', 'Need for Speed: Hot Pursuit', 'Prodeus'],
     chosenName: 'Randomizer'
   }
   },
@@ -33,7 +32,7 @@ export default{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 p{
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   color: #42A5F5;
   text-transform: uppercase;
