@@ -15,7 +15,7 @@
 export default{
   data() {
     return{
-    list: ['Backbone', 'Darkest Dougeon', 'Yakuza: Like a Dragon', 'Arx Fatalis', 'Dishonored: Death of the Outsider', 'Doom', 'The Evil Within 2', 'Rage',
+    list: ['Backbone', 'Darkest Dungeon', 'Yakuza: Like a Dragon', 'Arx Fatalis', 'Dishonored: Death of the Outsider', 'Doom (2016)', 'The Evil Within 2', 'Rage',
     'Wolfenstein II: The New Colossus', 'Fallout', 'Fallout 2', 'Fallout 3', 'Fallout Tactics', 'Worms Rumble', 'Iron Harvest', 'Need for Speed: Hot Pursuit', 'Prodeus'],
     chosenName: 'Randomizer'
   }
