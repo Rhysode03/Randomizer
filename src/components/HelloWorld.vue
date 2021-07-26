@@ -15,8 +15,22 @@
 export default{
   data() {
     return{
-    list: ['Backbone', 'Darkest Dungeon', 'Yakuza: Like a Dragon', 'Arx Fatalis', 'Dishonored: Death of the Outsider', 'Doom (2016)', 'The Evil Within 2', 'Rage',
-    'Wolfenstein II: The New Colossus', 'Fallout', 'Fallout 2', 'Fallout 3', 'Fallout Tactics', 'Worms Rumble', 'Iron Harvest', 'Need for Speed: Hot Pursuit', 'Prodeus'],
+    list: ['Bug Fables: The Everlasting Sapling',
+          'Gang Beasts',
+          'Immortal Realms: Vampire Wars',
+          'Limbo',
+          'Tropico 6',
+          'Bloodroots',
+          'Farming Simulator 19',
+          'Cris Tales',
+          'Atomicrops',
+          'Raji: An Ancient Epic',
+          'Last Stop',
+          'Microsoft Flight Simulator',
+          'Lethal League Blaze',
+          'Omno',
+          'Project Wingman',
+          'The Ascent'],
     chosenName: 'Randomizer'
   }
   },
