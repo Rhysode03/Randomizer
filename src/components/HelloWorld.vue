@@ -8,14 +8,16 @@
   </div>
   <div class="container">
   <div class="row mt-5 d-flex justify-content-center">
-  <input id="game" placeholder="Add a game to the list"></div>
-  <div class="row d-flex justify-content-center mt-1">
-  <button class="btn btn-primary ml-2" @click="addToList">Add a game</button>
-  <button class="btn btn-danger ml-2" @click="deleteList">Delete games</button>
+  <input class="mt-5" v-model='newGame' placeholder="Add a game to the list">
+  <button class="btn btn-primary ml-2 mt-5" @click="addGame">Add a game</button>
   </div>
-  <div class="row d-flex justify-content-center">
-  <div>{{list}}</div>
-  </div>
+  <div :v-for="(game, x) in games">
+  <p>
+  <span class="game">{{game}}</span>   
+  <button class="btn btn-danger ml-2" @click="deleteGame(x)">Delete game</button>
+  </p>
+  <p>{{games}}</p>
+</div>  
   </div>
 </div>
 
@@ -25,46 +27,46 @@
 <script>
 export default{
   data() {
-    return{
-    list: ['Curse of the Dead Gods',
-          'Dodgeball Academia',
-          'Katamari Damacy Reroll',
-          'Lumines Remastered',
-          'Starmancer',
-          'Art of Rally',
-          'Hades',
-          'Microsoft Solitaire Collection',
-          'Humankind',
-          'Recompile',
-          'Train Sim World 2',
-          'Twelve Minutes',
-          'Psychonauts 2',
-          'Myst',
-          'Boyfriend Dungeon',
-          'Library of Ruina',
-          'Quake',
-          'Quake II',
-          'Quake III'],
-    chosenName: 'Randomizer',
-  }
+      return{
+      newGame: null,
+      games: [],
+      chosenName: 'Randomizer',
+    }
+  },
+  mounted() {
+    if(localStorage.getItem('games')){
+      try{
+        this.games = JSON.parse(localStorage.getItem('games'));
+      }catch(e){
+        localStorage.removeItem('games');
+      }
+    }
   },
   methods: {
     picker(){
-      var chosenNumber = Math.floor(Math.random() * this.list.length);
-      this.chosenName = this.list[chosenNumber];
-      if (this.list.length <= 0) {
+      var chosenNumber = Math.floor(Math.random() * this.games.length);
+      this.chosenName = this.games[chosenNumber];
+      if (this.chosenName == null) {
         this.chosenName = 'Please add a game to the list'
       }
     },
-    addToList(){
-      this.list.push(document.getElementById("game").value);
+    addGame(){
+      if(!this.newGame){
+        return;
+      }
+      this.games.push(this.newGame);
+      this.newGame = '';
+      this.saveGame();
     },
-    deleteList(){
-        for (let i = this.list.length -1; i >= 0; i--){
-          this.list.splice(i, 1);
-        }
+    deleteGame(x){
+        this.games.splice(x, 1);
+        this.saveGame();
+    },
+    saveGame(){
+      const parsed = JSON.stringify(this.games);
+      localStorage.setItem('games', parsed);
     }
-}
+  }
 }
 </script>
 
