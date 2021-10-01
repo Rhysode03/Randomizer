@@ -11,12 +11,11 @@
   <input class="mt-5" v-model='newGame' placeholder="Add a game to the list">
   <button class="btn btn-primary ml-2 mt-5" @click="addGame">Add a game</button>
   </div>
-  <div :v-for="(game, x) in games">
+  <div v-for="(game, x) in games" :key="x">
   <p>
   <span class="game">{{game}}</span>   
   <button class="btn btn-danger ml-2" @click="deleteGame(x)">Delete game</button>
   </p>
-  <p>{{games}}</p>
 </div>  
   </div>
 </div>
